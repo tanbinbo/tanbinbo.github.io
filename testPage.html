@@ -20,7 +20,7 @@
 <body>
   <h1>this is test page</h1>
   <p>Access address: https://<<username>>.github.io/</p>
-<a href="">刷新当前页面</a>
+<a href="172.20.10.9:8081/report2/index">刷新当前页面</a>
 <script>
 var getBrowser = function () {
 	var u = navigator.userAgent, app = navigator.appVersion;
@@ -88,14 +88,9 @@ return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobil
             }
         }
         //alert(checkBrowser(), '判断终端')
-alert(navigator.userAgent.match(/\[(AWV.*?)\]/))
 var body = document.querySelector('body');
 body.addEventListener('click', function(){
 });
-alert(111)
-	alert(navigator.userAgent.indexOf('IOS') > -1 )
-	alert(navigator.userAgent.indexOf('iOS') > -1 )
-	alert(JSON.stringify(navigator))
 </script>
 </body>
 </html>
