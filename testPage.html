@@ -91,6 +91,7 @@ return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobil
 alert(isMobile.any())	    
 alert(JSON.stringify(getBrowser))
 alert(JSON.stringify(navigator.userAgent))
+alert(navigator.userAgent.match(/\[(AWV.*?)\]/))
 var body = document.querySelector('body');
 body.addEventListener('click', function(){
 });
