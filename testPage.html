@@ -5,12 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta itemprop="image" content="http://www.xiaozhu158.com/themes/simplebootx/Public/images/index/2.png">
     <title>this is test page</title>
+	
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html, body{
+        width: 100%;
+        height: 100%;
+    }
+    </style>
 </head>
 <body>
   <h1>this is test page</h1>
   <p>Access address: https://<<username>>.github.io/</p>
-    <script>
-        var getBrowser = function () {
+<script>
+var getBrowser = function () {
 	var u = navigator.userAgent, app = navigator.appVersion;
 	return {
 		trident: u.indexOf('Trident') > -1, /*IE内核*/
@@ -26,8 +37,12 @@
 		weixin: u.toLowerCase().indexOf('micromessenger') > -1 /*是否是微信*/
 	};
 }();
-        alert(JSON.stringify(getBrowser))
-    alert(JSON.stringify(navigator.userAgent))
-    </script>
+	    
+var body = document.querySelector('body');
+body.addEventListener('click', function(){
+	alert(JSON.stringify(getBrowser))
+	alert(JSON.stringify(navigator.userAgent))
+});
+</script>
 </body>
 </html>
