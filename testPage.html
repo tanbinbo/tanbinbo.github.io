@@ -38,7 +38,27 @@ var getBrowser = function () {
 		weixin: u.toLowerCase().indexOf('micromessenger') > -1 /*是否是微信*/
 	};
 }();
-	    
+var isMobile = {
+
+Android: function () {
+return !!navigator.userAgent.match(/Android/i);
+},
+
+BlackBerry: function () {
+return !!navigator.userAgent.match(/BlackBerry/i);
+},
+iOS: function () {
+return !!navigator.userAgent.match(/iPhone|iPad|iPod/i);
+},
+
+Windows: function () {
+return !!navigator.userAgent.match(/IEMobile/i);
+},
+any: function () {
+return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());
+}
+};
+alert(isMobile.any())	    
 alert(JSON.stringify(getBrowser))
 alert(JSON.stringify(navigator.userAgent))
 var body = document.querySelector('body');
